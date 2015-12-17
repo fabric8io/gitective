@@ -4,15 +4,15 @@
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
-		<version>7</version>
+		<version>9</version>
 	</parent>
 
 	<groupId>io.fabric8</groupId>
 	<artifactId>gitective-core</artifactId>
 	<version>0.9.10-SNAPSHOT</version>
-	<name>gitective core</name>
-	<description>gitective core library</description>
-	<url>http://gitective.org</url>
+	<name>fabric8 gitective core</name>
+	<description>fabric8 gitective core library</description>
+	<url>https://github.com/fabric8io/gitective</url>
 	<inceptionYear>2011</inceptionYear>
 
 	<issueManagement>
@@ -32,7 +32,9 @@
 		<url>https://github.com/fabric8io/gitective</url>
 		<connection>scm:git:git://github.com/fabric8io/gitective.git</connection>
 		<developerConnection>scm:git:git@github.com:fabric8io/gitective.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
+
 
 	<developers>
 		<developer>
@@ -41,13 +43,13 @@
 			<url>https://github.com/kevinsawicki</url>
 			<id>kevinsawicki</id>
 		</developer>
-                <developer>
-                        <id>geeks</id>
-                        <name>Fabric8 Development Team</name>
-                        <email>fabric8@googlegroups.com</email>
-                        <organization>fabric8</organization>
-                        <organizationUrl>http://fabric8.io/</organizationUrl>
-                </developer>
+		<developer>
+			<id>geeks</id>
+			<name>Fabric8 Development Team</name>
+			<email>fabric8@googlegroups.com</email>
+			<organization>fabric8</organization>
+			<organizationUrl>http://fabric8.io/</organizationUrl>
+		</developer>
 	</developers>
 
 	<properties>
@@ -59,16 +61,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>2.6</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -92,8 +94,16 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.15</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
+				<version>2.2.1</version>
 				<executions>
 					<execution>
 						<goals>
@@ -101,6 +111,11 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 			<plugin>
 				<groupId>com.github.github</groupId>
