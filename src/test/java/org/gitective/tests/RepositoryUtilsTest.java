@@ -38,6 +38,7 @@ import org.eclipse.jgit.transport.RemoteConfig;
 import org.eclipse.jgit.transport.URIish;
 import org.gitective.core.RepositoryUtils;
 import org.gitective.core.RepositoryUtils.RefDiff;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -197,7 +198,7 @@ public class RepositoryUtilsTest extends GitTestCase {
 	 *
 	 * @throws Exception
 	 */
-	@Test
+	@Ignore
 	public void oneOriginChange() throws Exception {
 		RevCommit commit1 = add("test.txt", "content");
 		File repo2 = initRepo();
