@@ -6,3 +6,6 @@ bin
 .project
 .fbprefs
 .classpath
+.idea
+*.iml
+
