@@ -9,7 +9,7 @@
 
 	<groupId>io.fabric8</groupId>
 	<artifactId>gitective-core</artifactId>
-	<version>0.9.24</version>
+	<version>0.9.25-SNAPSHOT</version>
 	<name>fabric8 gitective core</name>
 	<description>fabric8 gitective core library</description>
 	<url>https://github.com/fabric8io/gitective</url>
