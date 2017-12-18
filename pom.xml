@@ -32,7 +32,7 @@
 		<url>https://github.com/fabric8io/gitective</url>
 		<connection>scm:git:git://github.com/fabric8io/gitective.git</connection>
 		<developerConnection>scm:git:git@github.com:fabric8io/gitective.git</developerConnection>
-		<tag>gitective-core-0.9.24</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 
