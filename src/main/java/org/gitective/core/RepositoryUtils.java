@@ -220,7 +220,7 @@ public abstract class RepositoryUtils {
 						name = refPrefix + name.substring(R_HEADS.length());
 					else if (!name.startsWith(R_TAGS))
 						name = refPrefix + name;
-					final Ref localRef = repository.getRef(name);
+					final Ref localRef = repository.getAllRefs().get(name);
 					if (localRef == null
 							|| !remoteRef.getObjectId().equals(
 									localRef.getObjectId()))
@@ -228,7 +228,7 @@ public abstract class RepositoryUtils {
 				}
 			} else
 				for (Ref remoteRef : remoteRefs) {
-					final Ref localRef = repository.getRef(remoteRef.getName());
+					final Ref localRef = repository.getAllRefs().get(remoteRef.getName());
 					if (localRef == null
 							|| !remoteRef.getObjectId().equals(
 									localRef.getObjectId()))

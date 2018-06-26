@@ -179,11 +179,7 @@ public abstract class CommitUtils {
 					Assert.formatNotEmpty("Ref name"));
 
 		Ref ref;
-		try {
-			ref = repository.getRef(refName);
-		} catch (IOException e) {
-			throw new GitException(e, repository);
-		}
+		ref = repository.getAllRefs().get(refName);
 		return ref != null ? lookupRef(repository, ref) : null;
 	}
 
