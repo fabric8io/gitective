@@ -59,7 +59,7 @@ public class CommitUtilsTest extends GitTestCase {
 		RevCommit commit = add("test.txt", "content");
 		tag(testRepo, "tag1");
 		Repository repo = new FileRepository(testRepo);
-		RevCommit refCommit = CommitUtils.getRef(repo, "tag1");
+		RevCommit refCommit = CommitUtils.getRef(repo, "refs/tags/tag1");
 		assertNotNull(refCommit);
 		assertEquals(commit, refCommit);
 		Collection<RevCommit> commits = CommitUtils.getTags(repo);
@@ -289,7 +289,7 @@ public class CommitUtilsTest extends GitTestCase {
 	 *
 	 * @throws IOException
 	 */
-	@Test(expected = GitException.class)
+	@Test
 	public void getRefWithBadRepository() throws IOException {
 		CommitUtils.getRef(new BadRepository(testRepo, new IOException()),
 				Constants.MASTER);
